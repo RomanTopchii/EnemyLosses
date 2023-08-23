@@ -9,5 +9,5 @@ import Foundation
 
 protocol Repository<T> {
     associatedtype T
-    func getAll() -> [T]
+    func getAll() async throws -> [T]
 }

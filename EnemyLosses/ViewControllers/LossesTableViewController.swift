@@ -16,13 +16,13 @@ class LossesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(DailyLossesTableViewCell.self, forCellReuseIdentifier: Constants.CellsReuseIdentifier.dailyLosses.rawValue)
-        loadData()
+        self.tableView.register(LossesTableViewCell.self, forCellReuseIdentifier: Constants.CellsReuseIdentifier.dailyLosses.rawValue)
+        self.enemyLossesService.delegate = self
+        self.loadData()
     }
     
     private func loadData() {
-        self.losses = enemyLossesService.getAll().sorted(by: {$0.day > $1.day})
-        self.tableView.reloadData()
+        self.enemyLossesService.loadData()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -34,12 +34,26 @@ class LossesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellsReuseIdentifier.dailyLosses.rawValue, for: indexPath) as! DailyLossesTableViewCell
-        cell.setup(losses: self.losses[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellsReuseIdentifier.dailyLosses.rawValue, for: indexPath) as! LossesTableViewCell
+        
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        formatter.timeStyle = .none
+        formatter.locale = Locale(identifier: "\(Bundle.main.localizations.first ?? "en")_\(Locale.current.regionCode ?? "US")")
+      
+        
+        cell.setup(losses: self.losses[indexPath.row], dateFormatter: formatter)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+    }
+}
+
+extension LossesTableViewController: EnemyLossesServiceDelegate {
+    func presentData(losses: [Losses]) {
+        self.losses = losses.sorted(by: {$0.day > $1.day})
+        self.tableView.reloadData()
     }
 }

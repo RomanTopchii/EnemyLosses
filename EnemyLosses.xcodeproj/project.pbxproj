@@ -22,7 +22,7 @@
 		2BB862E52A93C30F00283E98 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB862E42A93C30F00283E98 /* Repository.swift */; };
 		2BB862E82A93C3BA00283E98 /* EquipmentLossesRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB862E72A93C3BA00283E98 /* EquipmentLossesRepositoryImpl.swift */; };
 		2BB862EE2A93C8D900283E98 /* EquipmentLossesDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB862ED2A93C8D900283E98 /* EquipmentLossesDto.swift */; };
-		2BB862F02A93CD0100283E98 /* DailyLossesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB862EF2A93CD0100283E98 /* DailyLossesTableViewCell.swift */; };
+		2BB862F02A93CD0100283E98 /* LossesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB862EF2A93CD0100283E98 /* LossesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +43,7 @@
 		2BB862E42A93C30F00283E98 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		2BB862E72A93C3BA00283E98 /* EquipmentLossesRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentLossesRepositoryImpl.swift; sourceTree = "<group>"; };
 		2BB862ED2A93C8D900283E98 /* EquipmentLossesDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentLossesDto.swift; sourceTree = "<group>"; };
-		2BB862EF2A93CD0100283E98 /* DailyLossesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLossesTableViewCell.swift; sourceTree = "<group>"; };
+		2BB862EF2A93CD0100283E98 /* LossesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +156,7 @@
 		2BB862F12A93CD0E00283E98 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				2BB862EF2A93CD0100283E98 /* DailyLossesTableViewCell.swift */,
+				2BB862EF2A93CD0100283E98 /* LossesTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -234,7 +234,7 @@
 			files = (
 				2B5E6E772A94E20D007B7B89 /* PersonnelLossesRepositoryImpl.swift in Sources */,
 				2B5E6E6E2A94D8F7007B7B89 /* Item.swift in Sources */,
-				2BB862F02A93CD0100283E98 /* DailyLossesTableViewCell.swift in Sources */,
+				2BB862F02A93CD0100283E98 /* LossesTableViewCell.swift in Sources */,
 				2BB862EE2A93C8D900283E98 /* EquipmentLossesDto.swift in Sources */,
 				2BB862E52A93C30F00283E98 /* Repository.swift in Sources */,
 				2BB862D02A93BA5E00283E98 /* LossesTableViewController.swift in Sources */,

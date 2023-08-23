@@ -16,11 +16,15 @@ struct EquipmentLossesDto: Codable {
     let apc: Int
     let fieldArtillery: Int
     let mlr: Int
-    let militaryAuto: Int
-    let fuelTank: Int
+    let militaryAuto: Int?
+    let fuelTank: Int?
     let drone: Int
     let navalShip: Int
     let antiAircraftWarfare: Int
+    let cruiseMissiles: Int?
+    let vehiclesAndFuelTasks: Int?
+    let specialEquipment: Int?
+    let greatestLossesDirection: String?
     
     enum CodingKeys: String, CodingKey {
         case date
@@ -36,5 +40,9 @@ struct EquipmentLossesDto: Codable {
         case drone
         case navalShip = "naval ship"
         case antiAircraftWarfare = "anti-aircraft warfare"
+        case cruiseMissiles = "cruise missiles"
+        case vehiclesAndFuelTasks = "vehicles and fuel tasks"
+        case specialEquipment = "special equipment"
+        case greatestLossesDirection = "greatest losses direction"
     }
 }
