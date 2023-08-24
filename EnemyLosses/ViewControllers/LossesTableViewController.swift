@@ -12,10 +12,19 @@ class LossesTableViewController: UITableViewController {
     private let enemyLossesService = EnemyLossesService(equipmentLossesRepository: EquipmentLossesRepositoryImpl(),
                                                         personnelLossesRepository: PersonnelLossesRepositoryImpl())
     
-    private var losses: [Losses] = []
+    private let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        formatter.timeStyle = .none
+        formatter.locale = Locale(identifier: "\(Bundle.main.localizations.first ?? "en")_\(Locale.current.language.region?.identifier ?? "US")")
+        return formatter
+    }()
     
+    private var losses: [Losses] = []
+  
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Enemy losses"
         self.tableView.register(LossesTableViewCell.self, forCellReuseIdentifier: Constants.CellsReuseIdentifier.dailyLosses.rawValue)
         self.enemyLossesService.delegate = self
         self.loadData()
@@ -35,19 +44,14 @@ class LossesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellsReuseIdentifier.dailyLosses.rawValue, for: indexPath) as! LossesTableViewCell
-        
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        formatter.timeStyle = .none
-        formatter.locale = Locale(identifier: "\(Bundle.main.localizations.first ?? "en")_\(Locale.current.regionCode ?? "US")")
-      
-        
-        cell.setup(losses: self.losses[indexPath.row], dateFormatter: formatter)
+        cell.setup(losses: self.losses[indexPath.row], dateFormatter: dateFormatter)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let detailsVC = LossesDetailsViewController()
+        detailsVC.lossesDetail = self.losses[indexPath.row]
+        self.navigationController?.pushViewController(detailsVC, animated: true)
     }
 }
 
@@ -55,5 +59,14 @@ extension LossesTableViewController: EnemyLossesServiceDelegate {
     func presentData(losses: [Losses]) {
         self.losses = losses.sorted(by: {$0.day > $1.day})
         self.tableView.reloadData()
+    }
+    
+    func presentError(error: Error) {
+        let alert = UIAlertController(title: "Error",
+                                      message: error.localizedDescription,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK",
+                                      style: .default))
+        self.present(alert, animated: true, completion: nil)
     }
 }

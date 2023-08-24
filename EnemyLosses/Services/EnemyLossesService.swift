@@ -9,6 +9,7 @@ import Foundation
 
 protocol EnemyLossesServiceDelegate {
     func presentData(losses: [Losses])
+    func presentError(error: Error)
 }
 
 class EnemyLossesService {
@@ -17,13 +18,13 @@ class EnemyLossesService {
     
     private var equipmentLossesRepository: any Repository<EquipmentLossesDto>
     private var personnelLossesRepository: any Repository<PersonnelLossesDto>
+    private var result: [Losses] = []
     
     init(equipmentLossesRepository: any Repository<EquipmentLossesDto>,
          personnelLossesRepository: any Repository<PersonnelLossesDto>) {
         self.equipmentLossesRepository = equipmentLossesRepository
         self.personnelLossesRepository = personnelLossesRepository
     }
-    var result: [Losses] = []
     
     func loadData() {
         result = []
@@ -55,10 +56,12 @@ class EnemyLossesService {
                     guard let self = self else {return}
                     self.delegate?.presentData(losses: self.result)
                 }
-                
             }
-            catch(let error){
-                print(error)
+            catch(let error) {
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else {return}
+                    self.delegate?.presentError(error: error)
+                }
             }
         }
     }

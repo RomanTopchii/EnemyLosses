@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B11472E2A977E5B005B4F29 /* LossesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B11472D2A977E5B005B4F29 /* LossesDetailsViewController.swift */; };
 		2B5E6E692A94AA7D007B7B89 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5E6E682A94AA7D007B7B89 /* Constants.swift */; };
 		2B5E6E6B2A94D560007B7B89 /* Losses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5E6E6A2A94D560007B7B89 /* Losses.swift */; };
 		2B5E6E6E2A94D8F7007B7B89 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5E6E6D2A94D8F7007B7B89 /* Item.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B11472D2A977E5B005B4F29 /* LossesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesDetailsViewController.swift; sourceTree = "<group>"; };
 		2B5E6E682A94AA7D007B7B89 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2B5E6E6A2A94D560007B7B89 /* Losses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Losses.swift; sourceTree = "<group>"; };
 		2B5E6E6D2A94D8F7007B7B89 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				2BB862CF2A93BA5E00283E98 /* LossesTableViewController.swift */,
+				2B11472D2A977E5B005B4F29 /* LossesDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			files = (
 				2B5E6E772A94E20D007B7B89 /* PersonnelLossesRepositoryImpl.swift in Sources */,
 				2B5E6E6E2A94D8F7007B7B89 /* Item.swift in Sources */,
+				2B11472E2A977E5B005B4F29 /* LossesDetailsViewController.swift in Sources */,
 				2BB862F02A93CD0100283E98 /* LossesTableViewCell.swift in Sources */,
 				2BB862EE2A93C8D900283E98 /* EquipmentLossesDto.swift in Sources */,
 				2BB862E52A93C30F00283E98 /* Repository.swift in Sources */,
