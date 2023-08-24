@@ -10,11 +10,11 @@ import Foundation
 class Item {
     var name: String
     var amount: Int?
-    //var diff: Int
+    var diff: Int?
     
     init(name: String, todayAmount: Int?, yesterdayAmount: Int?) {
         self.name = name
         self.amount = todayAmount
-        //self.diff = todayAmount - (yesterdayAmount ?? 0)
+        self.diff = todayAmount == nil ? nil : todayAmount! - (yesterdayAmount ?? 0)
     }
 }

@@ -18,6 +18,8 @@ class LossesTableViewCell: UITableViewCell {
             details += "\n" + item.name + " - " + (item.amount != nil ? String(item.amount!) : "")
         }
         
+        details += losses.greatestLossesDirection != nil ? "\nGreatest losses direction: " + losses.greatestLossesDirection! : ""
+        
         self.textLabel?.text = details
     }
 }
