@@ -54,7 +54,7 @@ class LossesTableViewCell: UITableViewCell {
         
         nonReusableViews.forEach{$0.removeFromSuperview()}
         
-        dateLabel.text = dateFormatter.string(from: losses.date)
+        dateLabel.text = dateFormatter.string(from: losses.date) + " (day \(losses.day))"
         
         for item in losses.items where item.amount != nil {
             let itemView = ItemView()

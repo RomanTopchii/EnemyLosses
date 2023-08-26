@@ -61,9 +61,9 @@ class Losses {
         self.items.append(Item(name: "Cruise missiles",
                                todayAmount: todayEquipmentLossesDto.cruiseMissiles,
                                yesterdayAmount: yesterdayEquipmentLossesDto?.cruiseMissiles))
-        self.items.append(Item(name: "Vehicles and fuel tasks",
-                               todayAmount: todayEquipmentLossesDto.vehiclesAndFuelTasks,
-                               yesterdayAmount: yesterdayEquipmentLossesDto?.vehiclesAndFuelTasks))
+        self.items.append(Item(name: "Vehicles and fuel tanks",
+                               todayAmount: todayEquipmentLossesDto.vehiclesAndFuelTanks,
+                               yesterdayAmount: yesterdayEquipmentLossesDto?.vehiclesAndFuelTanks))
         self.items.append(Item(name: "Special equipment",
                                todayAmount: todayEquipmentLossesDto.specialEquipment,
                                yesterdayAmount: yesterdayEquipmentLossesDto?.specialEquipment))

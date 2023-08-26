@@ -22,7 +22,7 @@ struct EquipmentLossesDto: Codable {
     let navalShip: Int
     let antiAircraftWarfare: Int
     let cruiseMissiles: Int?
-    let vehiclesAndFuelTasks: Int?
+    let vehiclesAndFuelTanks: Int?
     let specialEquipment: Int?
     let greatestLossesDirection: String?
     
@@ -41,7 +41,7 @@ struct EquipmentLossesDto: Codable {
         case navalShip = "naval ship"
         case antiAircraftWarfare = "anti-aircraft warfare"
         case cruiseMissiles = "cruise missiles"
-        case vehiclesAndFuelTasks = "vehicles and fuel tasks"
+        case vehiclesAndFuelTanks = "vehicles and fuel tanks"
         case specialEquipment = "special equipment"
         case greatestLossesDirection = "greatest losses direction"
     }
