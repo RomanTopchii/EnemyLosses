@@ -24,6 +24,7 @@
 		2BB862E82A93C3BA00283E98 /* EquipmentLossesRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB862E72A93C3BA00283E98 /* EquipmentLossesRepositoryImpl.swift */; };
 		2BB862EE2A93C8D900283E98 /* EquipmentLossesDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB862ED2A93C8D900283E98 /* EquipmentLossesDto.swift */; };
 		2BB862F02A93CD0100283E98 /* LossesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB862EF2A93CD0100283E98 /* LossesTableViewCell.swift */; };
+		2BE5CD5A2A99AE63005471E2 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5CD592A99AE63005471E2 /* ItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		2BB862E72A93C3BA00283E98 /* EquipmentLossesRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentLossesRepositoryImpl.swift; sourceTree = "<group>"; };
 		2BB862ED2A93C8D900283E98 /* EquipmentLossesDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentLossesDto.swift; sourceTree = "<group>"; };
 		2BB862EF2A93CD0100283E98 /* LossesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesTableViewCell.swift; sourceTree = "<group>"; };
+		2BE5CD592A99AE63005471E2 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,12 +123,13 @@
 		2BB862CA2A93BA5E00283E98 /* EnemyLosses */ = {
 			isa = PBXGroup;
 			children = (
+				2BB862F12A93CD0E00283E98 /* Cells */,
 				2B1147222A94EF18005B4F29 /* Models */,
-				2B5E6E672A94AA68007B7B89 /* Utilities */,
 				2BB862E32A93C25200283E98 /* Repositories */,
 				2B5E6E732A94E12B007B7B89 /* Services */,
 				2BB862E22A93C1E700283E98 /* ViewControllers */,
-				2BB862F12A93CD0E00283E98 /* Cells */,
+				2BE5CD582A99AE0D005471E2 /* Views */,
+				2B5E6E672A94AA68007B7B89 /* Utilities */,
 				2BB862CB2A93BA5E00283E98 /* AppDelegate.swift */,
 				2BB862CD2A93BA5E00283E98 /* SceneDelegate.swift */,
 				2BB862D12A93BA5E00283E98 /* Main.storyboard */,
@@ -162,6 +165,14 @@
 				2BB862EF2A93CD0100283E98 /* LossesTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		2BE5CD582A99AE0D005471E2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2BE5CD592A99AE63005471E2 /* ItemView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +259,7 @@
 				2BB862E82A93C3BA00283E98 /* EquipmentLossesRepositoryImpl.swift in Sources */,
 				2BB862CE2A93BA5E00283E98 /* SceneDelegate.swift in Sources */,
 				2B5E6E692A94AA7D007B7B89 /* Constants.swift in Sources */,
+				2BE5CD5A2A99AE63005471E2 /* ItemView.swift in Sources */,
 				2B5E6E752A94E155007B7B89 /* EnemyLossesService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -69,38 +69,19 @@ class LossesDetailsViewController: UIViewController {
         ])
         
         for item in details.items where item.amount != nil {
-            let itemView = UIView()
-            itemView.translatesAutoresizingMaskIntoConstraints = false
+            let itemView = ItemView()
+            itemView.configure(item: item, showDiffAmount: true)
+            mainStackView.addArrangedSubview(itemView)
+        }
+        
+        if let greatestLossesDirection = details.greatestLossesDirection, greatestLossesDirection.isEmpty == false {
             
             let titleLabel: UILabel = UILabel()
-            titleLabel.text = item.name
+            titleLabel.text = "Greatest losses direction: " + greatestLossesDirection
+            titleLabel.numberOfLines = 0
             titleLabel.translatesAutoresizingMaskIntoConstraints = false
             
-            let amountLabel: UILabel = UILabel()
-            amountLabel.text = item.diff == nil || item.diff == 0
-            ? String(item.amount!)
-            : "(+" + String(item.diff!) + ") " + String(item.amount!)
-            amountLabel.textAlignment = .right
-            amountLabel.translatesAutoresizingMaskIntoConstraints = false
-            
-            itemView.addSubview(titleLabel)
-            NSLayoutConstraint.activate([
-                titleLabel.leadingAnchor.constraint(equalTo: itemView.leadingAnchor),
-                titleLabel.topAnchor.constraint(equalTo: itemView.topAnchor),
-                titleLabel.bottomAnchor.constraint(equalTo: itemView.bottomAnchor)
-            ])
-            
-            itemView.addSubview(amountLabel)
-            NSLayoutConstraint.activate([
-                amountLabel.leadingAnchor.constraint(equalTo:titleLabel.trailingAnchor,constant: 10),
-                amountLabel.trailingAnchor.constraint(equalTo: itemView.trailingAnchor),
-                amountLabel.topAnchor.constraint(equalTo: itemView.topAnchor)
-            ])
-            
-            titleLabel.setContentCompressionResistancePriority(UILayoutPriority.defaultLow, for: .horizontal)
-            amountLabel.setContentHuggingPriority(UILayoutPriority.defaultHigh, for: .horizontal)
-            
-            mainStackView.addArrangedSubview(itemView)
+            mainStackView.addArrangedSubview(titleLabel)
         }
     }
 }

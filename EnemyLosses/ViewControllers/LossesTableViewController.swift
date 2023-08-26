@@ -44,7 +44,7 @@ class LossesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellsReuseIdentifier.dailyLosses.rawValue, for: indexPath) as! LossesTableViewCell
-        cell.setup(losses: self.losses[indexPath.row], dateFormatter: dateFormatter)
+        cell.configure(losses: self.losses[indexPath.row], dateFormatter: dateFormatter)
         return cell
     }
     
@@ -58,6 +58,7 @@ class LossesTableViewController: UITableViewController {
 extension LossesTableViewController: EnemyLossesServiceDelegate {
     func presentData(losses: [Losses]) {
         self.losses = losses.sorted(by: {$0.day > $1.day})
+        self.losses.forEach{print($0.date, $0.day)}
         self.tableView.reloadData()
     }
     
