@@ -27,7 +27,8 @@ class LossesTableViewController: UITableViewController {
         self.title = "Enemy losses"
         self.enemyLossesService.delegate = self
         self.configureTableViewRefreshControl()
-        self.tableView.register(LossesTableViewCell.self, forCellReuseIdentifier: Constants.CellsReuseIdentifier.dailyLosses.rawValue)
+        self.tableView.register(LossesTableViewCell.self, forCellReuseIdentifier: Constants.CellsReuseIdentifier.dailyLosses)
+        self.tableView.refreshControl?.beginRefreshing()
         self.loadData()
     }
     
@@ -53,7 +54,7 @@ extension LossesTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellsReuseIdentifier.dailyLosses.rawValue, for: indexPath) as! LossesTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellsReuseIdentifier.dailyLosses, for: indexPath) as! LossesTableViewCell
         cell.configure(losses: self.losses[indexPath.row], dateFormatter: dateFormatter)
         return cell
     }

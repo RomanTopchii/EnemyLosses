@@ -8,12 +8,12 @@
 import Foundation
 
 struct Constants {
-    enum CellsReuseIdentifier: String {
-        case dailyLosses = "DailyLossesTableViewCell"
+    struct CellsReuseIdentifier {
+        static let dailyLosses = "DailyLossesTableViewCell"
     }
     
-    enum Endpoints: String {
-        case equipmentLosses = "https://raw.githubusercontent.com/MacPaw/2022-Ukraine-Russia-War-Dataset/main/data/russia_losses_equipment.json"
-        case personnelLosses = "https://raw.githubusercontent.com/MacPaw/2022-Ukraine-Russia-War-Dataset/main/data/russia_losses_personnel.json"
+    struct Endpoints {
+        static let equipmentLosses = "https://raw.githubusercontent.com/MacPaw/2022-Ukraine-Russia-War-Dataset/main/data/russia_losses_equipment.json"
+        static let personnelLosses = "https://raw.githubusercontent.com/MacPaw/2022-Ukraine-Russia-War-Dataset/main/data/russia_losses_personnel.json"
     }
 }
