@@ -53,8 +53,8 @@ class LossesDetailsViewController: UIViewController {
         
         view.addSubview(mainScrollView)
         NSLayoutConstraint.activate([
-            mainScrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            mainScrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            mainScrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            mainScrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             mainScrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             mainScrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
