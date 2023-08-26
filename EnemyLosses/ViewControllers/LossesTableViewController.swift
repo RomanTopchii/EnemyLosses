@@ -21,19 +21,29 @@ class LossesTableViewController: UITableViewController {
     }()
     
     private var losses: [Losses] = []
-  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Enemy losses"
-        self.tableView.register(LossesTableViewCell.self, forCellReuseIdentifier: Constants.CellsReuseIdentifier.dailyLosses.rawValue)
         self.enemyLossesService.delegate = self
+        self.configureTableViewRefreshControl()
+        self.tableView.register(LossesTableViewCell.self, forCellReuseIdentifier: Constants.CellsReuseIdentifier.dailyLosses.rawValue)
         self.loadData()
     }
     
-    private func loadData() {
-        self.enemyLossesService.loadData()
+    private func configureTableViewRefreshControl(){
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(loadData), for: .valueChanged)
+        tableView.refreshControl = refreshControl
     }
     
+    @objc private func loadData() {
+        self.enemyLossesService.loadData()
+    }
+}
+
+//MARK: - TableView delegates methods
+extension LossesTableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -55,11 +65,14 @@ class LossesTableViewController: UITableViewController {
     }
 }
 
+//MARK: - EnemyLossesServiceDelegate methods
 extension LossesTableViewController: EnemyLossesServiceDelegate {
+    
     func presentData(losses: [Losses]) {
         self.losses = losses.sorted(by: {$0.day > $1.day})
-        self.losses.forEach{print($0.date, $0.day)}
         self.tableView.reloadData()
+        
+        self.tableView.refreshControl?.endRefreshing()
     }
     
     func presentError(error: Error) {
@@ -69,5 +82,7 @@ extension LossesTableViewController: EnemyLossesServiceDelegate {
         alert.addAction(UIAlertAction(title: "OK",
                                       style: .default))
         self.present(alert, animated: true, completion: nil)
+        
+        self.tableView.refreshControl?.endRefreshing()
     }
 }

@@ -20,7 +20,6 @@ class LossesTableViewCell: UITableViewCell {
     
     private let dateLabel: UILabel = {
         let label: UILabel = UILabel()
-        label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
