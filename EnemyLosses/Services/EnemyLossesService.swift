@@ -16,22 +16,19 @@ class EnemyLossesService {
     
     var delegate: EnemyLossesServiceDelegate?
     
-    private var equipmentLossesRepository: any Repository<EquipmentLossesDto>
-    private var personnelLossesRepository: any Repository<PersonnelLossesDto>
+    private var unitOfWork: UnitOfWork
     private var result: [Losses] = []
     
-    init(equipmentLossesRepository: any Repository<EquipmentLossesDto>,
-         personnelLossesRepository: any Repository<PersonnelLossesDto>) {
-        self.equipmentLossesRepository = equipmentLossesRepository
-        self.personnelLossesRepository = personnelLossesRepository
+    init(unitOfWork: UnitOfWork) {
+        self.unitOfWork = unitOfWork
     }
     
     func loadData() {
         result = []
         Task {
             do {
-                let equipmentLosses = try await equipmentLossesRepository.getAll()
-                let personnelLosses = try await personnelLossesRepository.getAll()
+                let equipmentLosses = try await unitOfWork.equipmentLossesRepository.getAll()
+                let personnelLosses = try await unitOfWork.personnelLossesRepository.getAll()
                 
                 for todayEquipment in equipmentLosses {
                     let dateFormatter = DateFormatter()

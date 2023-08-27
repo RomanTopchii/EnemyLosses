@@ -7,7 +7,10 @@
 
 import Foundation
 
-protocol Repository<T> {
+protocol Repository<T>: AnyObject {
     associatedtype T
+    
+    var url: URL { get }
+    
     func getAll() async throws -> [T]
 }

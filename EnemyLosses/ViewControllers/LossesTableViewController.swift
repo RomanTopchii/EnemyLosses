@@ -9,8 +9,7 @@ import UIKit
 
 class LossesTableViewController: UITableViewController {
     
-    private let enemyLossesService = EnemyLossesService(equipmentLossesRepository: EquipmentLossesRepositoryImpl(),
-                                                        personnelLossesRepository: PersonnelLossesRepositoryImpl())
+    private let enemyLossesService = EnemyLossesService(unitOfWork: UnitOfWorkImpl())
     
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()

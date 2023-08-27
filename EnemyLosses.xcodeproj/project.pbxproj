@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B057B4F2A9B758E0040782E /* UnitOfWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B057B4E2A9B758E0040782E /* UnitOfWork.swift */; };
+		2B057B512A9B75F00040782E /* UnitOfWorkImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B057B502A9B75F00040782E /* UnitOfWorkImpl.swift */; };
+		2B057B532A9B76640040782E /* RepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B057B522A9B76640040782E /* RepositoryImpl.swift */; };
 		2B11472E2A977E5B005B4F29 /* LossesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B11472D2A977E5B005B4F29 /* LossesDetailsViewController.swift */; };
 		2B5E6E692A94AA7D007B7B89 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5E6E682A94AA7D007B7B89 /* Constants.swift */; };
 		2B5E6E6B2A94D560007B7B89 /* Losses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5E6E6A2A94D560007B7B89 /* Losses.swift */; };
 		2B5E6E6E2A94D8F7007B7B89 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5E6E6D2A94D8F7007B7B89 /* Item.swift */; };
 		2B5E6E702A94DC87007B7B89 /* PersonnelLossesDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5E6E6F2A94DC87007B7B89 /* PersonnelLossesDto.swift */; };
 		2B5E6E752A94E155007B7B89 /* EnemyLossesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5E6E742A94E155007B7B89 /* EnemyLossesService.swift */; };
-		2B5E6E772A94E20D007B7B89 /* PersonnelLossesRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5E6E762A94E20D007B7B89 /* PersonnelLossesRepositoryImpl.swift */; };
 		2BB862CC2A93BA5E00283E98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB862CB2A93BA5E00283E98 /* AppDelegate.swift */; };
 		2BB862CE2A93BA5E00283E98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB862CD2A93BA5E00283E98 /* SceneDelegate.swift */; };
 		2BB862D02A93BA5E00283E98 /* LossesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB862CF2A93BA5E00283E98 /* LossesTableViewController.swift */; };
@@ -21,20 +23,21 @@
 		2BB862D52A93BA6100283E98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BB862D42A93BA6100283E98 /* Assets.xcassets */; };
 		2BB862D82A93BA6100283E98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BB862D62A93BA6100283E98 /* LaunchScreen.storyboard */; };
 		2BB862E52A93C30F00283E98 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB862E42A93C30F00283E98 /* Repository.swift */; };
-		2BB862E82A93C3BA00283E98 /* EquipmentLossesRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB862E72A93C3BA00283E98 /* EquipmentLossesRepositoryImpl.swift */; };
 		2BB862EE2A93C8D900283E98 /* EquipmentLossesDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB862ED2A93C8D900283E98 /* EquipmentLossesDto.swift */; };
 		2BB862F02A93CD0100283E98 /* LossesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB862EF2A93CD0100283E98 /* LossesTableViewCell.swift */; };
 		2BE5CD5A2A99AE63005471E2 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5CD592A99AE63005471E2 /* ItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B057B4E2A9B758E0040782E /* UnitOfWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitOfWork.swift; sourceTree = "<group>"; };
+		2B057B502A9B75F00040782E /* UnitOfWorkImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitOfWorkImpl.swift; sourceTree = "<group>"; };
+		2B057B522A9B76640040782E /* RepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryImpl.swift; sourceTree = "<group>"; };
 		2B11472D2A977E5B005B4F29 /* LossesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesDetailsViewController.swift; sourceTree = "<group>"; };
 		2B5E6E682A94AA7D007B7B89 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2B5E6E6A2A94D560007B7B89 /* Losses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Losses.swift; sourceTree = "<group>"; };
 		2B5E6E6D2A94D8F7007B7B89 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		2B5E6E6F2A94DC87007B7B89 /* PersonnelLossesDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonnelLossesDto.swift; sourceTree = "<group>"; };
 		2B5E6E742A94E155007B7B89 /* EnemyLossesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyLossesService.swift; sourceTree = "<group>"; };
-		2B5E6E762A94E20D007B7B89 /* PersonnelLossesRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonnelLossesRepositoryImpl.swift; sourceTree = "<group>"; };
 		2BB862C82A93BA5D00283E98 /* EnemyLosses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnemyLosses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB862CB2A93BA5E00283E98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BB862CD2A93BA5E00283E98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +47,6 @@
 		2BB862D72A93BA6100283E98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BB862D92A93BA6100283E98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BB862E42A93C30F00283E98 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		2BB862E72A93C3BA00283E98 /* EquipmentLossesRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentLossesRepositoryImpl.swift; sourceTree = "<group>"; };
 		2BB862ED2A93C8D900283E98 /* EquipmentLossesDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentLossesDto.swift; sourceTree = "<group>"; };
 		2BB862EF2A93CD0100283E98 /* LossesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesTableViewCell.swift; sourceTree = "<group>"; };
 		2BE5CD592A99AE63005471E2 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
@@ -153,8 +155,9 @@
 			isa = PBXGroup;
 			children = (
 				2BB862E42A93C30F00283E98 /* Repository.swift */,
-				2BB862E72A93C3BA00283E98 /* EquipmentLossesRepositoryImpl.swift */,
-				2B5E6E762A94E20D007B7B89 /* PersonnelLossesRepositoryImpl.swift */,
+				2B057B522A9B76640040782E /* RepositoryImpl.swift */,
+				2B057B4E2A9B758E0040782E /* UnitOfWork.swift */,
+				2B057B502A9B75F00040782E /* UnitOfWorkImpl.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -246,9 +249,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B5E6E772A94E20D007B7B89 /* PersonnelLossesRepositoryImpl.swift in Sources */,
 				2B5E6E6E2A94D8F7007B7B89 /* Item.swift in Sources */,
+				2B057B512A9B75F00040782E /* UnitOfWorkImpl.swift in Sources */,
 				2B11472E2A977E5B005B4F29 /* LossesDetailsViewController.swift in Sources */,
+				2B057B4F2A9B758E0040782E /* UnitOfWork.swift in Sources */,
 				2BB862F02A93CD0100283E98 /* LossesTableViewCell.swift in Sources */,
 				2BB862EE2A93C8D900283E98 /* EquipmentLossesDto.swift in Sources */,
 				2BB862E52A93C30F00283E98 /* Repository.swift in Sources */,
@@ -256,9 +260,9 @@
 				2BB862CC2A93BA5E00283E98 /* AppDelegate.swift in Sources */,
 				2B5E6E6B2A94D560007B7B89 /* Losses.swift in Sources */,
 				2B5E6E702A94DC87007B7B89 /* PersonnelLossesDto.swift in Sources */,
-				2BB862E82A93C3BA00283E98 /* EquipmentLossesRepositoryImpl.swift in Sources */,
 				2BB862CE2A93BA5E00283E98 /* SceneDelegate.swift in Sources */,
 				2B5E6E692A94AA7D007B7B89 /* Constants.swift in Sources */,
+				2B057B532A9B76640040782E /* RepositoryImpl.swift in Sources */,
 				2BE5CD5A2A99AE63005471E2 /* ItemView.swift in Sources */,
 				2B5E6E752A94E155007B7B89 /* EnemyLossesService.swift in Sources */,
 			);
